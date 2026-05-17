@@ -52,5 +52,7 @@ gh repo clone Victor-dev513/Calc-notas teste-clone
 cd teste-clone
 pytest -v
 ```
+## Exemplo de uso
+python calculadora.py
 
 Esses são os comandos que foram usados para criar o repositório, fazer branch e merge, e testar em outra pasta.
