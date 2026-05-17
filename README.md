@@ -27,3 +27,30 @@ pytest -v
 ```
 
 Todos os testes devem passar com sucesso.
+
+## Comandos utilizados
+
+```powershell
+cd e:\Calc-notas
+
+gh repo create Victor-dev513/Calc-notas --public --source=. --remote=origin --push
+
+git checkout -b feature/testes
+# faça alterações e commits claros
+git add .
+git commit -m "chore: criar estrutura inicial"
+git commit -m "feat: implementar função calcula_media"
+git commit -m "feat: implementar função situacao"
+git commit -m "test: adicionar testes unitários"
+git commit -m "ci: adicionar workflow de testes GitHub Actions"
+
+git checkout master
+git merge feature/testes
+git push origin master
+
+gh repo clone Victor-dev513/Calc-notas teste-clone
+cd teste-clone
+pytest -v
+```
+
+Esses são os comandos que foram usados para criar o repositório, fazer branch e merge, e testar em outra pasta.
